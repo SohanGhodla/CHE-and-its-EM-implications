@@ -5,7 +5,7 @@ Some figures require additional input that has been precalculated and stored in 
 and "Run_dat_NS_period.txt". The contents of these files are:
 
 1) **B_phi_data.txt** - contains the toroidal component of the proto NS's magnetic field along the the precollapse masses of the progenitor star.
-2) **Collapsar_calc_data.txt** - contains the precollapse mass of the progenitor star along with the isotropic equivalent energy and energy emitted in the winds.
+2) **Collapsar_calc_data.txt** - contains the precollapse mass of the progenitor star along with the isotropic equivalent energy of the GRB and the kinetic energy emitted in the winds.
 3) **Run_dat_NS_period.txt** - contains the precollapse mass of the progenitor star along with the rotational period and rotational energy of the proto NS.
 
 The **Pics** folder stores the output figures from the notebooks. 
