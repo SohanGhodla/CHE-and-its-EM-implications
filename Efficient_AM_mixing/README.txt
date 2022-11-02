@@ -1,0 +1,1 @@
+The clean inlist directory provides the MESA inlists need to reproduce Figure 3. Precalculated models at 3 metallicities are also provided.
