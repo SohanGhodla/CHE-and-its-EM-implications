@@ -1,0 +1,159 @@
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+      runtime_minutes:   4.64
+      steps:   1501
+      retries:      1
+      redos:      0
+      solver_calls_made:   1502
+      solver_calls_failed:      1
+      solver_iterations:   4696
+      log_rel_run_E_err:        -9.9007664003270435
+    - inlist: inlist_project_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+      runtime_minutes:   4.74
+      steps:   1528
+      retries:      1
+      redos:      0
+      solver_calls_made:   1529
+      solver_calls_failed:      1
+      solver_iterations:   4687
+      log_rel_run_E_err:        -9.4972672870908479
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+      runtime_minutes:  33.97
+      steps:   2026
+      retries:    181
+      redos:      0
+      solver_calls_made:   2207
+      solver_calls_failed:    181
+      solver_iterations:  12008
+      log_rel_run_E_err:        -4.9868425145458319
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_project_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_project_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_project_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_project_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_zams_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header
+    - inlist: inlist_project_header

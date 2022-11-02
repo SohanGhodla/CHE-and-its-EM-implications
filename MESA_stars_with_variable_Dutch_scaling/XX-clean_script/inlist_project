@@ -1,0 +1,33 @@
+&star_job
+
+      show_log_description_at_start = .true. 
+
+      set_initial_cumulative_energy_error = .true.
+      new_cumulative_energy_error = 0d0
+
+      !Initialize model num and age ?? Does it only work at the start or everytime this list is read??
+      set_initial_model_number = .true.
+      initial_model_number = 0  
+      set_initial_age = .true. 
+      initial_age = 0d0
+
+      save_model_when_terminate = .true.
+      save_model_filename = 'final.mod'
+      required_termination_code_string = 'xa_central_lower_limit'
+
+      pgstar_flag=.true.
+      pause_before_terminate = .true.
+
+/ ! end of star_job namelist
+
+&controls
+
+      !fe_core_infall_limit = 2d7 !m/s
+      xa_central_lower_limit_species(1) = 'c12'
+      xa_central_lower_limit(1) = 1d-9
+      max_model_number = 20000
+      
+/ ! end of controls namelist
+
+
+
