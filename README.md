@@ -9,7 +9,7 @@ and "Run_dat_NS_period.txt". The contents of these files are:
 3) **Run_dat_NS_period.txt** - contains the precollapse mass of the progenitor star along with the rotational period and rotational energy of the proto NS.
 
 The **Pics** folder stores the output figures from the notebooks. 
-The "MESA_stars_with_variable_Dutch_scaling" contain the MESA inslist required to reproduce the MESA models used in section 5.3, 5.4 of the article.
+The **MESA_stars_with_variable_Dutch_scaling** contain the MESA inslist required to reproduce the MESA models used in section 5.3, 5.4 of the article.
 
 The **Data_fig_1** folder contains data for generating Fig. 1.
 The **Efficient_AM_mixing** folder contains data and MESA  inlist required to reporduce Fig. 3
