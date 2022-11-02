@@ -8,7 +8,7 @@ and "Run_dat_NS_period.txt". The contents of these files are:
 2) **Collapsar_calc_data.txt** - contains the precollapse mass of the progenitor star along with the isotropic equivalent energy of the GRB and the kinetic energy emitted in the winds.
 3) **Run_dat_NS_period.txt** - contains the precollapse mass of the progenitor star along with the rotational period and rotational energy of the proto NS.
 
-This precalculated input can be reproduced if the MESA models are present. The **MESA_stars_with_variable_Dutch_scaling** contain the MESA inslist required to reproduce the MESA models (used in section 5.3, 5.4 of the article).
+This precalculated input can be reproduced if the MESA models are available. The **MESA_stars_with_variable_Dutch_scaling** contain the MESA inslist required to reproduce the MESA models (used in section 5.3, 5.4 of the article).
 
 The **Pics** folder stores the output figures from the notebooks. 
 
