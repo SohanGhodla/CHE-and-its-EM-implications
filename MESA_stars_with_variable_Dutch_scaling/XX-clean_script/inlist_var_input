@@ -3,7 +3,7 @@
       load_saved_model = .true.
       saved_model_name = 'zams_50.0Msun.mod'
 
-      !**************SET ROTATION ***************
+      !------- SET ROTATION -------
       new_rotation_flag = .true.
       change_rotation_flag = .true.
       
@@ -11,17 +11,17 @@
       set_initial_omega_div_omega_crit = .true.
       new_omega_div_omega_crit = 0.46
 
-      !set_initial_surface_rotation_v = .true. !otherwise doesn't record v_surface data?
+      !set_initial_surface_rotation_v = .true. 
       ! new_surface_rotation_v = 300
 
-      ! !**************Standard initial composition Z= 0.02 ***************************
+      ! ------- Standard initial composition Z= 0.02 -------
       ! set_uniform_initial_composition = .true.
       ! initial_h1 = 0.70d0
       ! initial_h2 = 0d0
       ! initial_he3 = 0d0
       ! initial_he4 = 0.28d0
 
-      ! ! *******************Composition will be switched to this one*******************
+      ! ! ------- Composition will be switched to this one -------
       ! relax_initial_Z = .true.
       ! new_Z = 0.001d0
       ! relax_initial_Y = .true.
@@ -36,22 +36,22 @@
 
 
 &kap  
-      !*********Saves initial Z**************
+      !------- Saves initial Z-------
       Zbase = 0.00001
 / ! end of kap namelist
 
 
 &controls
- !***********SET initial MASS and METALLICITY***************
+      !------- SET initial MASS and METALLICITY -------
       initial_mass = 50d0
       !don't need this as being set by relaxation above.
       initial_z = 0.00001
 
 
-      dX_nuc_drop_limit = 5d-3 !5d-2 earlier -- SG  !If max dX_nuc_drop is greater than
+      dX_nuc_drop_limit = 5d-3 
       use_gold2_tolerances = .true.
       use_gold_tolerances = .true.
-      w_div_wcrit_max = 0.65d0  !w stands for wind? !default = 0.90d0 !limits rotational shape distortion 
+      w_div_wcrit_max = 0.65d0  !default = 0.90d0 !limits rotational shape distortion 
       ! correction factors to 50% of their crit value?
       ! use implicit wind close to critical
       ! surf_avg_tau_min = 0 !1 default
@@ -65,12 +65,10 @@
       ! mdot_revise_factor = 1.2
       max_mdot_jump_for_rotation = 1.1
 
-
-      !MESH AND TIMESTEP PARAMETERS -- Set as default (if no variation later)
       mesh_delta_coeff = 1.0
       varcontrol_target = 7d-4
     
-      !*************************Various Mixing fudges*************************
+      !------- Various Mixing fudges -------
       mixing_length_alpha = 1.5d0
       alpha_semiconvection = 1d0
       overshoot_scheme(1) = 'step'
@@ -80,7 +78,6 @@
       overshoot_f(1) = 0.185
       overshoot_f0(1) = 0.01
  
-    !   !Pextra_factor = 2.0 !for limiting radial fluctuation of massive radiative stars
     !   delta_HR_limit = 0.003 !limit large jumps on HR diagram
       D_omega_mixing_across_convection_boundary = .true.
 
@@ -98,7 +95,7 @@
       de_Jager_scaling_factor = 1d0 !0d0 default.
       
 
-      !*********************ROTATIONAL MIXING coeffs***********************
+      !------- ROTATIONAL MIXING coeffs -------
       am_nu_ST_factor = 1.0
       D_visc_factor = 0.0
       am_nu_SH_factor = 0.0
@@ -116,7 +113,6 @@
       !dimension less factor to account for that.
       am_gradmu_factor = 0.1d0
      
-      !***********************Some extra resolution parameters*******************
       solver_iters_timestep_limit = 10
       ! recalc_mixing_info_each_substep = .true.
 
@@ -132,6 +128,8 @@
     gradT_excess_max_change = 0.01d0 !Changed
 
 
+    ! Below controls for better resolution during certain phases of evolution
+    ! Most orrowed from Fuller et al. 2022
 
     ! Fixing the position of the Lagrangian region of the mesh helps
     ! convergence near the Eddington limit
