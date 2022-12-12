@@ -1,0 +1,129 @@
+&star_job
+
+      load_saved_model = .true.
+	saved_model_name = 'zams_60.0Msun.mod'
+
+      !**************SET ROTATION ***************
+      new_rotation_flag = .true.
+      change_rotation_flag = .true.
+      
+      set_omega_div_omega_crit = .true.
+      set_initial_omega_div_omega_crit = .true.
+	new_omega_div_omega_crit = 0.49
+
+      !set_initial_surface_rotation_v = .true. !otherwise doesn't record v_surface data?
+      ! new_surface_rotation_v = 300
+
+      ! !**************Standard initial composition Z= 0.02 ***************************
+      ! set_uniform_initial_composition = .true.
+      ! initial_h1 = 0.70d0
+      ! initial_h2 = 0d0
+      ! initial_he3 = 0d0
+      ! initial_he4 = 0.28d0
+
+      ! ! *******************Composition will be switched to this one*******************
+      ! relax_initial_Z = .true.
+      ! new_Z = 0.001d0
+      ! relax_initial_Y = .true.
+      ! new_Y = 0.242d0
+
+      relax_initial_tau_factor=.true. !Only works on ./rn, not ./re
+      relax_to_this_tau_factor=1d3
+      dlogtau_factor=.1
+
+      pause_before_terminate = .true.
+/ !end of star_jobs
+
+
+&kap  
+      !*********Saves initial Z**************
+	Zbase = 0.0001
+/ ! end of kap namelist
+
+
+&controls
+ !***********SET initial MASS and METALLICITY***************
+	initial_mass = 60.0
+      !don't need this as being set by relaxation above.
+	initial_z = 0.0001
+
+
+      dX_nuc_drop_limit = 5d-3 !5d-2 earlier -- SG  !If max dX_nuc_drop is greater than
+      use_gold2_tolerances = .true.
+      use_gold_tolerances = .true.
+      w_div_wcrit_max = 0.65d0  !w stands for wind? !default = 0.90d0 !limits rotational shape distortion 
+      ! correction factors to 50% of their crit value?
+      ! use implicit wind close to critical
+      ! surf_avg_tau_min = 0 !1 default
+      ! surf_avg_tau = 10
+      max_mdot_redo_cnt = 200  ! 0 default
+      min_years_dt_for_redo_mdot = 0  !  deafult val
+      surf_w_div_w_crit_limit = 0.98d0 !0.99 default
+      surf_w_div_w_crit_tol = 0.02d0 !0.05 default
+      ! rotational_mdot_boost_fac = 1d5  ! 1d5 default ! Increase mdot.
+      ! rotational_mdot_kh_fac = 1d10 !0.3do default !! Kelvin-helmholtz boost.
+      ! mdot_revise_factor = 1.2
+      max_mdot_jump_for_rotation = 1.1
+
+
+      
+
+      !MESH AND TIMESTEP PARAMETERS -- Set as default (if no variation later)
+      mesh_delta_coeff = 1.0
+      varcontrol_target = 7d-4
+    
+      !*************************Various Mixing fudges*************************
+      mixing_length_alpha = 1.5d0
+      alpha_semiconvection = 1d0
+      overshoot_scheme(1) = 'step'
+      overshoot_zone_type(1) = 'burn_H'
+      overshoot_zone_loc(1) = 'core'
+      overshoot_bdy_loc(1) = 'top'
+      overshoot_f(1) = 0.185
+      overshoot_f0(1) = 0.01
+ 
+      !Pextra_factor = 2.0 !for limiting radial fluctuation of massive radiative stars
+      delta_HR_limit = 0.003 !limit large jumps on HR diagram
+      !D_omega_mixing_across_convection_boundary = .true.
+
+      !USE wind mass loss scheme of Brott et al. (2011)
+      !use_other_wind = .true.
+
+       ! wind options
+      hot_wind_scheme = 'Dutch'
+      cool_wind_RGB_scheme = 'de Jager'
+      cool_wind_AGB_scheme = 'de Jager'
+      Dutch_wind_lowT_scheme = 'de Jager'
+      cool_wind_full_on_T = 9.9d3
+      hot_wind_full_on_T = 1d4
+	Dutch_scaling_factor = 0.07
+      de_Jager_scaling_factor = 1d0 !0d0 default.
+      
+
+      !*********************ROTATIONAL MIXING coeffs***********************
+      am_nu_ST_factor = 1.0
+      D_visc_factor = 0.0
+      am_nu_SH_factor = 0.0
+      D_ST_factor = 1.0
+      D_SH_factor = 0.0
+      D_GSF_factor = 1.0
+      D_ES_factor = 1.0
+      D_SSI_factor = 1.0
+      D_DSI_factor = 1.0
+      !num_cells_for_smooth_gradL_composition_term = 2
+      !Efficiency of angular momentum mixing = 1/30 or 0.0333 See -->
+      ! (Chaboyer & Zahn 1992; Heger, Langer & Woosley 2000).
+      am_D_mix_factor = 0.0333333d0
+      !The inhibiting effect of composition gradients in rotational mixing as described by Heger et al. (2000)
+      !dimension less factor to account for that.
+      am_gradmu_factor = 0.1d0
+     
+      !***********************Some extra resolution parameters*******************
+      solver_iters_timestep_limit = 10
+      ! recalc_mixing_info_each_substep = .true.
+
+/ ! end of controls namelist
+
+
+
+
